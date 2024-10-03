@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
-}
+/* App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+  background-color: #f0f0f0; /* Background color for the career page */
+}
+
+.career-page {
+  text-align: center;
+}
+
+.reveal-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff; /* Bootstrap primary color */
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.reveal-btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.birthday-container {
+  text-align: center;
+}
+
+.flowers-container {
+  display: flex;
+  justify-content: center;
+}
+
+.flower-image {
+  width: 100px; /* Adjust flower image size as needed */
+  margin: 5px;
+}
+
+/* FlowerPage styles */
+.image-container {
+  position: relative;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.flower-image {
+  position: absolute; /* Positioning the image */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  width: 100%; /* Make it full width */
+  height: 100%; /* Make it full height */
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
+  transform: translate(-50%, -50%); /* Centering the image */
+}
+
+/* Message Box styles */
+.message-box-container {
+  position: absolute;
+  bottom: 20%; /* Position from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10; /* Ensure it appears on top */
+}
+
+.clickable-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid #007bff; /* Blue border */
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.clickable-box:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.message-popup {
+  background-color: white;
+  border: 2px solid #007bff; /* Blue border */
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.message-popup p {
+  margin: 0; /* Remove default margin for paragraphs */
+}
+
+.close-button {
+  background-color: #dc3545; /* Red color for close button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: #c82333; /* Darker red on hover */
 }
